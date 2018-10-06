@@ -12,6 +12,24 @@ object Form1: TForm1
   Font.Style = []
   OldCreateOrder = False
   OnClick = ToolButton1Click
+  OnShow = ToolButton1Click
   PixelsPerInch = 96
   TextHeight = 13
+  object Memo1: TMemo
+    Left = 8
+    Top = 80
+    Width = 417
+    Height = 89
+    TabOrder = 0
+  end
+  object LabeledEdit1: TLabeledEdit
+    Left = 8
+    Top = 24
+    Width = 305
+    Height = 21
+    EditLabel.Width = 145
+    EditLabel.Height = 13
+    EditLabel.Caption = 'Message to hash with SHA256'
+    TabOrder = 1
+  end
 end
