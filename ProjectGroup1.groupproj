@@ -1,0 +1,36 @@
+﻿<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+    <PropertyGroup>
+        <ProjectGuid>{E158632D-C421-43C9-9813-601E2E08E8E5}</ProjectGuid>
+    </PropertyGroup>
+    <ItemGroup>
+        <Projects Include="Sha256.dproj">
+            <Dependencies/>
+        </Projects>
+    </ItemGroup>
+    <ProjectExtensions>
+        <Borland.Personality>Default.Personality.12</Borland.Personality>
+        <Borland.ProjectType/>
+        <BorlandProject>
+            <Default.Personality/>
+        </BorlandProject>
+    </ProjectExtensions>
+    <Target Name="Sha256">
+        <MSBuild Projects="Sha256.dproj"/>
+    </Target>
+    <Target Name="Sha256:Clean">
+        <MSBuild Projects="Sha256.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="Sha256:Make">
+        <MSBuild Projects="Sha256.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="Build">
+        <CallTarget Targets="Sha256"/>
+    </Target>
+    <Target Name="Clean">
+        <CallTarget Targets="Sha256:Clean"/>
+    </Target>
+    <Target Name="Make">
+        <CallTarget Targets="Sha256:Make"/>
+    </Target>
+    <Import Project="$(BDS)\Bin\CodeGear.Group.Targets" Condition="Exists('$(BDS)\Bin\CodeGear.Group.Targets')"/>
+</Project>

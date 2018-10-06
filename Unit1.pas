@@ -16,9 +16,9 @@ type
   public
     { Public declarations }
   end;
-
+//
 var
-  Form1: TForm1;
+ Form1: TForm1;
 
 implementation
 
@@ -31,7 +31,7 @@ begin
  astr:='한글이 이상해 ㅡㅡ;';
  caption:=ahash.GetHashString(astr)+'--->HashSize:'+inttostr(ahash.GetHashSize)+' bytes';
  showmessage('String representation '+IntToStr(Length(ahash.GetHashString(astr)))+' chars');
-
+  // System.hash module has Sha2
 end;
 
 end.
