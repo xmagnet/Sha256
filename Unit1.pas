@@ -31,7 +31,7 @@ begin
  astr:='한글이 이상해 ㅡㅡ;';
  caption:=ahash.GetHashString(astr)+'--->HashSize:'+inttostr(ahash.GetHashSize)+' bytes';
  showmessage('String representation '+IntToStr(Length(ahash.GetHashString(astr)))+' chars');
-  // System.hash module has Sha2
+  // System.hash module has Sha2 한글이 깨짐
 end;
 
 end.
