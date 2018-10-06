@@ -29,10 +29,8 @@ var astr: string;
     ahash: THashSHA2;
 begin
  astr:='한글이 이상해 ㅡㅡ;';
- ahash:=ahash.Create(sha256);
  caption:=ahash.GetHashString(astr)+'--->HashSize:'+inttostr(ahash.GetHashSize)+' bytes';
  showmessage('String representation '+IntToStr(Length(ahash.GetHashString(astr)))+' chars');
- //LenghthOf();
 
 end;
 
